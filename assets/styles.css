@@ -1,0 +1,321 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+}
+
+/* -------- HEADER AND NAVBAR -------- */
+#navbar{
+    width: 80%;
+    margin: 0 auto;
+}
+
+header{
+    background-color: #c6f1c2;
+    font-size: 150%;
+}
+
+/* header clear fix */
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo{
+    display: flex;
+    justify-content: flex-start;
+    float: left;
+    color: #022520;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* styling list */
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* styling list elements */
+nav li{
+    display: inline-flex;
+    justify-content: space-between;
+    margin-left: 70px;
+    padding-top: 3vh;
+    position: relative;
+}
+
+/* styling contents of list elements */
+nav a{
+    color: #022520;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+/* bolding effect when cursor hovers over element */
+nav a:hover{
+    color: #000;
+}
+
+/* bar effect when cursor hovers over element */
+nav a::before{
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before{
+    width: 100%;
+}
+
+/* makes the navbar sticky */
+#header{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+}
+
+/* -------- LANDING PAGE -------- */
+
+#landing-page{
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#landing-page::before{    
+    content: "";
+    background-image:url('../media/me_2.JPG');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.4;
+    background-attachment: fixed;
+}
+
+#landing-page h1{
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 8vh;
+    font-weight: 340;
+    text-align: center;
+    color: #202020;
+}
+
+#landing-page h2{
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 6vh;
+    font-weight: 300;
+    text-align: center;
+    color: #202020;
+}
+
+/* -------- ABOUT ME -------- */
+
+#about-me{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+#about-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    flex: 1;
+}
+
+#about-title h3{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 4vw;
+    font-weight: 300;
+    color: #a5bdb9;
+}
+
+#about-images{
+    display: flex;
+}
+
+#denji-drawing{
+    width: 10vw;
+}
+
+#skate-pic{
+    width: 20vw;
+}
+
+#about-bio{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #d3f1ec;
+    flex: 1;
+}
+
+#about-bio h3{
+    padding: 3vh;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 300;
+}
+
+#about-bio p{
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 300;
+}
+
+#about-bio ul{
+    list-style-type: square;
+    font-size: 2vw;
+    font-weight: 300;
+}
+
+#about-bio li{
+    list-style-type: square;
+    font-size: 2vw;
+    font-weight: 300;
+}
+
+/* -------- PROJECTS -------- */
+
+#projects{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+#project-title{
+    display: flex;
+    order: 2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    flex: 1;
+}
+
+#project-title i{
+    font-size: 3vw;
+}
+
+#project-title h3{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 4vw;
+    font-weight: 300;
+    color: #a5bdb9;
+}
+
+#project-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #d3d8f1;
+    flex: 1;
+}
+
+#project-list ul{
+    display: flex;
+    flex-direction: column;
+    padding: 3vh;
+    font-size: 2vw;
+    font-weight: 300;
+}
+
+#project-list li{
+    margin: 3vh;
+    font-size: 2vw;
+    font-weight: 300;
+}
+
+#project-list a{
+    text-decoration: none;
+    color: #000000;
+}
+
+#project-list a:visited{
+    text-decoration: none;
+    color: #000000;
+}
+
+#project-list a:hover{
+    color: #ffffff;
+}
+
+/* -------- CONTACT ME -------- */
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+#contact h3{
+    font-size: 4vw;
+    font-weight: 300;
+    color: #a5bdb9;
+}
+
+#contact ul{
+    display: flex;
+    list-style-type: none;
+}
+
+#contact li{
+    margin: 4vw;
+}
+
+#contact a{
+    text-decoration: none;
+    color: #f1d3d5;
+    font-size: 5vw;
+}
+
+#contact a:visited{
+    text-decoration: none;
+    color: #f1d3d5;
+}
+
+#contact a:hover{
+    text-decoration: none;
+    color: #000000;
+}
